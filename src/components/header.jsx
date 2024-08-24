@@ -7,13 +7,19 @@ function Header() {
         {/** Menu Start */}
         <div className="flex items-center">
           <button className="w-[50px] h-[36px] flex items-center justify-center">
+            {/** Hamburger Menu Icon Start */}
             <div className="w-[35px] h-[35px] rounded-full flex items-center justify-center hover:bg-[#e6f6fc]">
-              <img
-                src="/icons/burger-menu.svg"
-                alt=""
-                className="w-[20px] h-[20px]"
-              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="w-[20px] h-[20px] text-[#006491]"
+              >
+                <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
             </div>
+            {/** Hamburger Menu Icon End */}
           </button>
           {/** px-[816px] Menu Start */}
           <div className="hidden md2:flex ml-[8px] w-[250px] h-[26px] justify-between items-center">
@@ -58,13 +64,19 @@ function Header() {
           {/** Search Start */}
           <div className="w-[42px] md:w-[60px] h-[40px] px-[8px] py-[4px] md:py-[3px] md:pl-[18px] md:pr-[5px]">
             <button className="w-[28px] h-[28px] md:w-[36px] md:h-[36px] flex items-center justify-center">
+              {/** Search Icon Start */}
               <div className="w-full h-full rounded-full flex items-center justify-center hover:bg-[#e6f6fc]">
-                <img
-                  src="icons/search-icon.svg"
-                  alt=""
-                  className="w-[20px] h-[20px]"
-                />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  className="w-[20px] h-[20px] text-[#006491]"
+                >
+                  <path d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                </svg>
               </div>
+              {/** Search Icon End */}
             </button>
           </div>
           {/** Search End */}
@@ -78,7 +90,7 @@ function Header() {
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  className="w-[20px] h-[20px] group-hover:text-white"
+                  className="w-[20px] h-[20px] text-[#006491] group-hover:text-white"
                 >
                   <path d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
                 </svg>
