@@ -2,7 +2,7 @@ import React from "react";
 
 function Header() {
   return (
-    <header className="w-full p-[10px] md:p-[20px] flex items-center justify-center fixed bg-white">
+    <header className="w-full p-[10px] md:p-[20px] flex items-center justify-center fixed bg-white z-10">
       <div className="w-full max-w-[1230px] h-full flex items-center justify-between">
         {/** Menu Start */}
         <div className="flex items-center">
@@ -14,7 +14,8 @@ function Header() {
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-                className="w-[20px] h-[20px] text-[#006491]"
+                strokeWidth={2}
+                className="w-[25px] h-[25px] text-[#006491]"
               >
                 <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
               </svg>
@@ -23,13 +24,13 @@ function Header() {
           </button>
           {/** px-[816px] Menu Start */}
           <div className="hidden md2:flex ml-[8px] w-[250px] h-[26px] justify-between items-center">
-            <p className="text-[12px] font-prompt cursor-pointer hover:text-[#4a91b1]">
+            <p className="text-[14px] font-prompt cursor-pointer text-[#4a91b1]">
               หน้าหลัก
             </p>
-            <p className="text-[12px] font-prompt cursor-pointer hover:text-[#4a91b1]">
+            <p className="text-[14px] font-prompt cursor-pointer hover:text-[#4a91b1]">
               ติดตามการสั่งซื้อ
             </p>
-            <p className="text-[12px] font-prompt cursor-pointer hover:text-[#4a91b1]">
+            <p className="text-[14px] font-prompt cursor-pointer hover:text-[#4a91b1]">
               ค้นหาสาขา
             </p>
           </div>
@@ -38,11 +39,14 @@ function Header() {
         {/** Menu End */}
 
         {/** Logo Domino Pizza Start */}
-        <img
-          src="/images/logo-head.svg"
-          alt=""
-          className="w-[135px] h-[32px] cursor-pointer"
-        />
+        <button className="md:w-[180px] md:h-[40px] flex justify-center min-[816px]:justify-start">
+          <img
+            src="/images/logo-head.svg"
+            alt=""
+            className="w-[135px] h-[32px] cursor-pointer"
+          />
+        </button>
+
         {/** Logo Domino Pizza End */}
 
         {/** Search and Change Language Start */}
