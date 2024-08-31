@@ -2,7 +2,7 @@ import React from "react";
 
 function Header() {
   return (
-    <header className="w-full p-[10px] md:p-[20px] flex items-center justify-center fixed bg-white z-10">
+    <header className="w-full p-[10px] md:p-[20px] flex items-center justify-center fixed bg-white z-50">
       <div className="w-full max-w-[1230px] h-full flex items-center justify-between">
         {/** Menu Start */}
         <div className="flex items-center">

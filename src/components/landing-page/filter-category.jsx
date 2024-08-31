@@ -1,8 +1,9 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
+import { useFilter } from "../../context/filter-context";
 
 function FilterCategory() {
   const menuRef = useRef(null);
-  const [isSection, setIsSection] = useState("promotion");
+  const { isSection, setIsSection } = useFilter();
 
   const slideLeft = () => {
     menuRef.current.scrollBy({
@@ -94,7 +95,7 @@ function FilterCategory() {
               className="px-[5px] h-full flex items-center justify-center cursor-pointer"
               onClick={handlePromotion}
             >
-              <p className="font-prompt text-[16px] min-[724px]:text-[18px] text-[#676a6d]">
+              <p className="font-prompt text-[16px] min-[724px]:text-[18px] text-[#676a6d] hover:text-[#0b6a95]">
                 โปรโมชั่น
               </p>
             </div>
@@ -117,7 +118,7 @@ function FilterCategory() {
               className="px-[5px] h-full flex items-center justify-center cursor-pointer"
               onClick={handleNewMenu}
             >
-              <p className="font-prompt text-[16px] min-[724px]:text-[18px] text-[#676a6d]">
+              <p className="font-prompt text-[16px] min-[724px]:text-[18px] text-[#676a6d] hover:text-[#0b6a95]">
                 เมนูใหม่
               </p>
             </div>
@@ -140,7 +141,7 @@ function FilterCategory() {
               className="px-[5px] h-full flex items-center justify-center cursor-pointer"
               onClick={handlePizza}
             >
-              <p className="font-prompt text-[16px] min-[724px]:text-[18px] text-[#676a6d]">
+              <p className="font-prompt text-[16px] min-[724px]:text-[18px] text-[#676a6d] hover:text-[#0b6a95]">
                 พิซซ่า
               </p>
             </div>
@@ -162,7 +163,7 @@ function FilterCategory() {
               className="px-[5px] h-full flex items-center justify-center cursor-pointer"
               onClick={handleChicken}
             >
-              <p className="font-prompt text-[16px] min-[724px]:text-[18px] text-[#676a6d]">
+              <p className="font-prompt text-[16px] min-[724px]:text-[18px] text-[#676a6d] hover:text-[#0b6a95]">
                 ไก่
               </p>
             </div>
@@ -185,7 +186,7 @@ function FilterCategory() {
               className="px-[5px] h-full flex items-center justify-center cursor-pointer"
               onClick={handlePasta}
             >
-              <p className="font-prompt text-[16px] min-[724px]:text-[18px] text-[#676a6d]">
+              <p className="font-prompt text-[16px] min-[724px]:text-[18px] text-[#676a6d] hover:text-[#0b6a95]">
                 พาสต้า
               </p>
             </div>
@@ -208,7 +209,7 @@ function FilterCategory() {
               className="px-[5px] h-full flex items-center justify-center cursor-pointer"
               onClick={handleDrink}
             >
-              <p className="font-prompt text-[16px] min-[724px]:text-[18px] text-[#676a6d]">
+              <p className="font-prompt text-[16px] min-[724px]:text-[18px] text-[#676a6d] hover:text-[#0b6a95]">
                 เครื่องดื่ม
               </p>
             </div>
@@ -230,7 +231,7 @@ function FilterCategory() {
               className="px-[5px] h-full flex items-center justify-center cursor-pointer"
               onClick={handleSnack}
             >
-              <p className="font-prompt text-[16px] min-[724px]:text-[18px] text-[#676a6d]">
+              <p className="font-prompt text-[16px] min-[724px]:text-[18px] text-[#676a6d] hover:text-[#0b6a95]">
                 ของทานเล่น
               </p>
             </div>
@@ -252,7 +253,7 @@ function FilterCategory() {
               className="px-[5px] h-full flex items-center justify-center cursor-pointer"
               onClick={handleDripSource}
             >
-              <p className="font-prompt text-[16px] min-[724px]:text-[18px] text-[#676a6d]">
+              <p className="font-prompt text-[16px] min-[724px]:text-[18px] text-[#676a6d] hover:text-[#0b6a95]">
                 ดิปปิ้้งซอส
               </p>
             </div>
