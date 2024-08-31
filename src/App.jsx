@@ -5,6 +5,7 @@ import FilterCategory from "./components/landing-page/filter-category";
 import ContentCard from "./components/landing-page/content-card";
 import { FilterProvider } from "./context/filter-context";
 import LandingCart from "./components/landing-page/landing-cart";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <ContentCard />
       </FilterProvider>
       <LandingCart />
+      <Footer />
     </div>
   );
 }
