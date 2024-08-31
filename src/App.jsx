@@ -4,6 +4,7 @@ import CardCarousel from "./components/landing-page/card-carousel";
 import FilterCategory from "./components/landing-page/filter-category";
 import ContentCard from "./components/landing-page/content-card";
 import { FilterProvider } from "./context/filter-context";
+import LandingCart from "./components/landing-page/landing-cart";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <FilterCategory />
         <ContentCard />
       </FilterProvider>
+      <LandingCart />
     </div>
   );
 }

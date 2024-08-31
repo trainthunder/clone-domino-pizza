@@ -5,8 +5,6 @@ import FilterPizza from "./filter-pizza.jsx";
 
 function ContentCard() {
   const { isSection, isTypePizza } = useFilter();
-  console.log(isTypePizza);
-
   let datas = DataMenu;
 
   const filterMenu = datas.filter((items) => {
@@ -21,7 +19,7 @@ function ContentCard() {
   return (
     <div className="w-screen h-full flex justify-center flex-col items-center">
       {isSection === "pizza" ? <FilterPizza /> : null}
-      <div className="w-full max-w-[1140px] h-full px-[5px] pt-[20px] flex flex-wrap md:px-0 gap-y-[30px] md:gap-y-[60px]">
+      <div className="w-full max-w-[1140px] h-full px-[5px] pt-[20px] pb-[30px] md:pb-[60px] flex flex-wrap md:px-0 gap-y-[30px] md:gap-y-[60px]">
         {filterMenu.map((items, index) => {
           return (
             <div
