@@ -44,7 +44,7 @@ function CardCarousel() {
       >
         <Carousel
           leftControl={
-            <div className="w-[40px] h-[40px] rounded-full bg-[#006491] hover:brightness-125 border-[1px] border-white flex items-center justify-center cursor-pointer">
+            <div className="w-[40px] h-[40px] rounded-full bg-[#006491] hover:brightness-125 border-[1px] border-white flex items-center justify-center cursor-pointer absolute left-[40px] ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -58,7 +58,7 @@ function CardCarousel() {
             </div>
           }
           rightControl={
-            <div className="w-[40px] h-[40px] rounded-full bg-[#006491] hover:brightness-125 border-[1px] border-white flex items-center justify-center cursor-pointer">
+            <div className="w-[40px] h-[40px] rounded-full bg-[#006491] hover:brightness-125 border-[1px] border-white flex items-center justify-center cursor-pointer absolute right-[55px] ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
