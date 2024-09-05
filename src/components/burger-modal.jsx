@@ -1,9 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import { useModal } from "../context/modal.context";
+import { useNavigate } from "react-router-dom";
 
 function BurgerModal() {
   const { isOpen, setIsOpen } = useModal();
   const modalRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -74,7 +76,12 @@ function BurgerModal() {
                 </div>
                 <div className="flex items-center">
                   {/** Login Start */}
-                  <p className="font-prompt text-[13px] font-semibold text-white ">
+                  <p
+                    className="font-prompt text-[13px] font-semibold text-white"
+                    onClick={() => {
+                      navigate("/login");
+                    }}
+                  >
                     เข้าสู่ระบบ/
                   </p>
                   {/** Login End */}

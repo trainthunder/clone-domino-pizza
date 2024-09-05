@@ -2,12 +2,12 @@ import React from "react";
 import { useModal } from "../context/modal.context";
 
 function Header() {
-  const { isOpen, setIsOpen } = useModal();
+  const { setIsOpen } = useModal();
   const handleClickBurger = () => {
     setIsOpen(true);
   };
   return (
-    <header className="w-full p-[10px] md:p-[20px] flex items-center justify-center fixed bg-white z-50">
+    <header className="w-full p-[10px] md:p-[20px] flex items-center justify-center fixed bg-white z-50 shadow-lg">
       <div className="w-full max-w-[1230px] h-full flex items-center justify-between">
         {/** Menu Start */}
         <div className="flex items-center">
@@ -54,7 +54,6 @@ function Header() {
             className="w-[135px] h-[32px] cursor-pointer"
           />
         </button>
-
         {/** Logo Domino Pizza End */}
 
         {/** Search and Change Language Start */}
