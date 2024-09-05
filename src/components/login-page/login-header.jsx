@@ -1,10 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-function LoginRegisterHeader() {
+function LoginHeader() {
   const navigate = useNavigate();
   return (
-    <header className="w-full p-[10px] md:p-[20px] flex items-center justify-center fixed bg-white z-50 shadow-lg">
+    <header className="w-full py-[10px] md:py-[20px] flex items-center justify-center fixed bg-white z-50 shadow-lg">
       <div className="w-full max-w-[1230px] h-full flex items-center justify-between">
         {/** Back To Home Page Icon Start */}
         <button
@@ -41,4 +41,4 @@ function LoginRegisterHeader() {
   );
 }
 
-export default LoginRegisterHeader;
+export default LoginHeader;

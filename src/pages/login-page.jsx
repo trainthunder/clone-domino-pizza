@@ -1,10 +1,14 @@
 import React from "react";
-import LoginRegisterHeader from "../components/login-page/login-register-header";
+import LoginHeader from "../components/login-page/login-header";
+import LoginForm from "../components/login-page/login-form";
+import Footer from "../components/footer";
 
 function LoginPage() {
   return (
-    <div>
-      <LoginRegisterHeader />
+    <div className="w-full h-full overflow-clip">
+      <LoginHeader />
+      <LoginForm />
+      <Footer />
     </div>
   );
 }
