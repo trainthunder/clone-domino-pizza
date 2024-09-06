@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-function LoginHeader() {
+function RegisterHeader() {
   const navigate = useNavigate();
   return (
     <header className="w-full py-[10px] md:py-[20px] flex items-center justify-center fixed bg-white z-50 shadow-lg">
@@ -10,7 +10,7 @@ function LoginHeader() {
         <button
           className="w-[50px] h-[40px] flex items-center justify-center"
           onClick={() => {
-            navigate("/home");
+            navigate("/login");
           }}
         >
           <svg
@@ -46,4 +46,4 @@ function LoginHeader() {
   );
 }
 
-export default LoginHeader;
+export default RegisterHeader;

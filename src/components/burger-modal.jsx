@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { useModal } from "../context/modal.context";
+import { useModal } from "../context/modal-context";
 import { useNavigate } from "react-router-dom";
 
 function BurgerModal() {
@@ -87,7 +87,12 @@ function BurgerModal() {
                   {/** Login End */}
 
                   {/** Register Start */}
-                  <p className="font-prompt text-[13px] font-semibold text-white">
+                  <p
+                    className="font-prompt text-[13px] font-semibold text-white"
+                    onClick={() => {
+                      navigate("/register");
+                    }}
+                  >
                     สมัครสมาชิก
                   </p>
                   {/** Register End */}
@@ -97,7 +102,12 @@ function BurgerModal() {
 
               <div className="flex flex-col">
                 {/** Home-Page Button Section Start */}
-                <button className="w-full h-[53px] border-t-[1px] flex gap-[8px] items-center">
+                <button
+                  className="w-full h-[53px] border-t-[1px] flex gap-[8px] items-center"
+                  onClick={() => {
+                    navigate("/home");
+                  }}
+                >
                   <div className="w-[26px] h-[26px] flex items-center justify-center">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

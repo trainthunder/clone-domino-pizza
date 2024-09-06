@@ -1,5 +1,5 @@
 import React from "react";
-import { useModal } from "../context/modal.context";
+import { useModal } from "../context/modal-context";
 
 function Header() {
   const { setIsOpen } = useModal();
