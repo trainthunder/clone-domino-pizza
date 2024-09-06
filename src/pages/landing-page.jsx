@@ -6,7 +6,7 @@ import ContentCard from "../components/landing-page/content-card";
 import LandingCart from "../components/landing-page/landing-cart";
 import Footer from "../components/footer";
 import { FilterProvider } from "../context/filter-context";
-import { ModalProvider } from "../context/modal.context";
+import { ModalProvider } from "../context/modal-context";
 import BurgerModal from "../components/burger-modal";
 
 function LandingPage() {

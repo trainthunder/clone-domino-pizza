@@ -4,7 +4,6 @@ const userModalContext = createContext();
 
 function ModalProvider({ children }) {
   const [isOpen, setIsOpen] = useState(false);
-  console.log(isOpen);
   return (
     <userModalContext.Provider value={{ isOpen, setIsOpen }}>
       {children}

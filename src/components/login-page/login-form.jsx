@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function LoginForm() {
   const navigate = useNavigate();
+  const [isFocusedTel, setIsFocusedTel] = useState(false);
+  const [isFocusedPassword, setIsFocusedPassword] = useState(false);
+
   return (
     <div className="w-screen h-full flex justify-center bg-white">
       <div className="w-full max-w-[375px] h-full pt-[61px] md:pt-[81px] flex flex-col">
         <div className="w-full h-full pt-[30px] px-[15px] flex flex-col items-center justify-center">
           <img
-            src="/images/cover_login.svg"
+            src="/images/cover-login.svg"
             alt=""
             className="w-[300px] h-[175px] mb-[45px]"
           />
@@ -19,22 +22,34 @@ function LoginForm() {
             เข้าสู่ระบบแล้วเริ่มสั่งอาหารกันเลย!
           </p>
         </div>
+
         <form action="" className="w-full h-full px-[5px] relative mb-[30px]">
           {/** Phone Login Start */}
           <div className="w-full h-full p-[10px]">
-            <div className="w-full h-[45px] border-[1px] rounded-lg flex items-center">
+            <div
+              className={`w-full h-[45px] border-[1px] rounded-lg flex items-center ${
+                isFocusedTel ? "border-[1px] border-[#3f8aac]" : "border-[1px]"
+              }`}
+            >
               <div className="w-[40px] h-[30px] flex items-center justify-center border-r-[1px] mr-[10px]">
                 <p className="font-prompt font-light text-[12px] text-[#666f89]">
                   +66
                 </p>
               </div>
               {/** Floating Label Phone Number Start */}
-              <div className="w-[200px] h-[30px] relative">
+              <div className="w-[285px] h-[30px] relative">
                 <input
                   id="phone"
                   type="tel"
                   className="peer border-0 border-transparent w-full h-full placeholder-transparent text-[12px] bg-white text-black focus:ring-0"
                   placeholder="เบอร์โทรศัพท์"
+                  autoComplete="current-username"
+                  onFocus={() => {
+                    setIsFocusedTel(true);
+                  }}
+                  onBlur={() => {
+                    setIsFocusedTel(false);
+                  }}
                   required
                 />
                 <label
@@ -55,7 +70,13 @@ function LoginForm() {
 
           {/** Password  Login Start */}
           <div className="w-full h-full p-[10px]">
-            <div className="w-full h-[45px] border-[1px] rounded-lg flex items-center justify-between">
+            <div
+              className={`w-full h-[45px] border-[1px] rounded-lg flex items-center justify-between ${
+                isFocusedPassword
+                  ? "border-[1px] border-[#3f8aac]"
+                  : "border-[1px]"
+              }`}
+            >
               {/** Floating Label Phone Number Start */}
               <div className="w-[300px] h-[30px] relative">
                 <input
@@ -63,6 +84,13 @@ function LoginForm() {
                   type="password"
                   className="peer border-0 border-transparent w-full h-full placeholder-transparent text-[12px] bg-white text-black focus:ring-0"
                   placeholder="รหัสผ่าน"
+                  autoComplete="current-password"
+                  onFocus={() => {
+                    setIsFocusedPassword(true);
+                  }}
+                  onBlur={() => {
+                    setIsFocusedPassword(false);
+                  }}
                   required
                 />
                 <label
