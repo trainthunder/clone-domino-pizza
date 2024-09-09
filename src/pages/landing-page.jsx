@@ -1,20 +1,20 @@
 import React from "react";
-import Header from "../components/header";
+import LandingHeader from "../components/landing-page/landing-header";
 import CardCarousel from "../components/landing-page/card-carousel";
 import FilterCategory from "../components/landing-page/filter-category";
 import ContentCard from "../components/landing-page/content-card";
 import LandingCart from "../components/landing-page/landing-cart";
 import Footer from "../components/footer";
 import { FilterProvider } from "../context/filter-context";
-import { ModalProvider } from "../context/modal-context";
-import BurgerModal from "../components/burger-modal";
+import { HomeModalProvider } from "../context/home-modal-context";
+import HomeBurgerModal from "../components/landing-page/home-burger-modal";
 
 function LandingPage() {
   return (
-    <ModalProvider>
+    <HomeModalProvider>
       <div className="w-full h-full overflow-clip">
-        <Header />
-        <BurgerModal />
+        <LandingHeader />
+        <HomeBurgerModal />
         <CardCarousel />
         <FilterProvider>
           <FilterCategory />
@@ -23,7 +23,7 @@ function LandingPage() {
         <LandingCart />
         <Footer />
       </div>
-    </ModalProvider>
+    </HomeModalProvider>
   );
 }
 

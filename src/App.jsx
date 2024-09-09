@@ -9,6 +9,7 @@ import {
 import LandingPage from "./pages/landing-page";
 import LoginPage from "./pages/login-page";
 import RegisterPage from "./pages/register-page";
+import OrderTrackingPage from "./pages/order-tracking-page";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
+          <Route path="/tracking" element={<OrderTrackingPage />} />
         </Routes>
       </BrowserRouter>
     </div>

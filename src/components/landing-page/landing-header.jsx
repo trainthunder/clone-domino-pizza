@@ -1,8 +1,10 @@
-import React from "react";
-import { useModal } from "../context/modal-context";
+import React, { useState } from "react";
+import { useHomeModal } from "../../context/home-modal-context";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
-  const { setIsOpen } = useModal();
+  const navigate = useNavigate();
+  const { setIsOpen } = useHomeModal();
   const handleClickBurger = () => {
     setIsOpen(true);
   };
@@ -32,10 +34,20 @@ function Header() {
           </button>
           {/** px-[816px] Menu Start */}
           <div className="hidden md2:flex ml-[8px] w-[250px] h-[26px] justify-between items-center">
-            <p className="text-[14px] font-prompt cursor-pointer text-[#4a91b1]">
+            <p
+              className="text-[14px] font-prompt cursor-pointer text-[#4a91b1]"
+              onClick={() => {
+                navigate("/home");
+              }}
+            >
               หน้าหลัก
             </p>
-            <p className="text-[14px] font-prompt cursor-pointer hover:text-[#4a91b1]">
+            <p
+              className="text-[14px] font-prompt cursor-pointer hover:text-[#4a91b1]"
+              onClick={() => {
+                navigate("/tracking");
+              }}
+            >
               ติดตามการสั่งซื้อ
             </p>
             <p className="text-[14px] font-prompt cursor-pointer hover:text-[#4a91b1]">
@@ -47,7 +59,12 @@ function Header() {
         {/** Menu End */}
 
         {/** Logo Domino Pizza Start */}
-        <button className="md:w-[180px] md:h-[40px] flex justify-center min-[816px]:justify-start">
+        <button
+          className="md:w-[180px] md:h-[40px] flex justify-center min-[816px]:justify-start"
+          onClick={() => {
+            navigate("/home");
+          }}
+        >
           <img
             src="/images/logo-head.svg"
             alt=""
