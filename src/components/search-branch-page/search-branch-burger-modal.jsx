@@ -1,9 +1,9 @@
-import React, { useEffect, useRef } from "react";
-import { useHomeModal } from "../../context/home-modal-context";
+import React, { useRef, useEffect } from "react";
+import { useSearchStoreModal } from "../../context/search-store-modal-context";
 import { useNavigate } from "react-router-dom";
 
-function BurgerModal() {
-  const { isOpen, setIsOpen } = useHomeModal();
+function SearchStoreBurgerModal() {
+  const { isOpen, setIsOpen } = useSearchStoreModal();
   const modalRef = useRef(null);
   const navigate = useNavigate();
 
@@ -28,7 +28,6 @@ function BurgerModal() {
   const handleClickClose = () => {
     setIsOpen(false);
   };
-
   return (
     <>
       {isOpen === true ? (
@@ -105,7 +104,7 @@ function BurgerModal() {
                 <button
                   className="w-full h-[53px] border-t-[1px] flex gap-[8px] items-center"
                   onClick={() => {
-                    setIsOpen(false);
+                    navigate("/home");
                   }}
                 >
                   <div className="w-[26px] h-[26px] flex items-center justify-center">
@@ -120,7 +119,7 @@ function BurgerModal() {
                       <path d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
                     </svg>
                   </div>
-                  <p className="font-prompt text-[14px] text-[#0b6a95]">
+                  <p className="font-prompt text-[14px] text-black hover:text-[#0b6a95]">
                     หน้าหลัก
                   </p>
                 </button>
@@ -156,7 +155,7 @@ function BurgerModal() {
                 <button
                   className="w-full h-[53px] border-t-[1px] flex gap-[8px] items-center"
                   onClick={() => {
-                    navigate("/search-store");
+                    setIsOpen(false);
                   }}
                 >
                   <div className="w-[26px] h-[26px] flex items-center justify-center">
@@ -171,7 +170,7 @@ function BurgerModal() {
                       <path d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m5.231 13.481L15 17.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v16.5c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Zm3.75 11.625a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
                     </svg>
                   </div>
-                  <p className="font-prompt text-[14px] text-black hover:text-[#0b6a95]">
+                  <p className="font-prompt text-[14px] text-[#0b6a95]">
                     ค้นหาสาขา
                   </p>
                 </button>
@@ -225,4 +224,4 @@ function BurgerModal() {
   );
 }
 
-export default BurgerModal;
+export default SearchStoreBurgerModal;
