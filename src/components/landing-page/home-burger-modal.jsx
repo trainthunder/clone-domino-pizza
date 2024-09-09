@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from "react";
-import { useModal } from "../context/modal-context";
+import { useHomeModal } from "../../context/home-modal-context";
 import { useNavigate } from "react-router-dom";
 
 function BurgerModal() {
-  const { isOpen, setIsOpen } = useModal();
+  const { isOpen, setIsOpen } = useHomeModal();
   const modalRef = useRef(null);
   const navigate = useNavigate();
 
@@ -105,7 +105,7 @@ function BurgerModal() {
                 <button
                   className="w-full h-[53px] border-t-[1px] flex gap-[8px] items-center"
                   onClick={() => {
-                    navigate("/home");
+                    setIsOpen(false);
                   }}
                 >
                   <div className="w-[26px] h-[26px] flex items-center justify-center">
@@ -127,7 +127,12 @@ function BurgerModal() {
                 {/** Home-Page Button Section End */}
 
                 {/** Delivery Button Section Start */}
-                <button className="w-full h-[53px] border-t-[1px] flex gap-[8px] items-center">
+                <button
+                  className="w-full h-[53px] border-t-[1px] flex gap-[8px] items-center"
+                  onClick={() => {
+                    navigate("/tracking");
+                  }}
+                >
                   <div className="w-[26px] h-[26px] flex items-center justify-center">
                     <svg
                       aria-hidden="true"
