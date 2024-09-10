@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import DataMenu from "../../data/menus.jsx";
 import { useFilter } from "../../context/filter-context.jsx";
 import FilterPizza from "./filter-pizza.jsx";
+import { useCountPizza } from "../../context/add-pizza-context.jsx";
 
 function ContentCard() {
   const { isSection, isTypePizza } = useFilter();
+  const { isCount, setIsCount } = useCountPizza();
   let datas = DataMenu;
 
   const filterMenu = datas.filter((items) => {
@@ -15,6 +17,10 @@ function ContentCard() {
     }
     return filterByCategory;
   });
+
+  const handleClickAdd = () => {
+    setIsCount(isCount + 1);
+  };
 
   return (
     <div className="w-screen h-full flex justify-center flex-col items-center">
@@ -60,7 +66,10 @@ function ContentCard() {
                   <p className="text-[22px] md:text-[28px] font-prompt font-semibold">
                     ฿{items.price}
                   </p>
-                  <div className="w-[26px] h-[26px] bg-[#0b6a95] hover:brightness-125 rounded-full flex items-center justify-center">
+                  <div
+                    className="w-[26px] h-[26px] bg-[#0b6a95] hover:brightness-125 rounded-full flex items-center justify-center"
+                    onClick={handleClickAdd}
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
