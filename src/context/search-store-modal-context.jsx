@@ -4,7 +4,7 @@ const userSearchStoreContext = createContext();
 
 function SearchStoreModalProvider({ children }) {
   const [isOpen, setIsOpen] = useState(false);
-  console.log(isOpen);
+
   return (
     <userSearchStoreContext.Provider value={{ isOpen, setIsOpen }}>
       {children}
