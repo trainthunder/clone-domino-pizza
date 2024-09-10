@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import { useHomeModal } from "../../context/home-modal-context";
+import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useSearchStoreModal } from "../../context/search-store-modal-context";
 
-function Header() {
+function SearchBranchHeader() {
   const navigate = useNavigate();
-  const { setIsOpen } = useHomeModal();
-  const handleClickBurger = () => {
+  const { setIsOpen } = useSearchStoreModal();
+  const handleSearchBranchBurger = () => {
     setIsOpen(true);
   };
   return (
@@ -15,7 +15,7 @@ function Header() {
         <div className="flex items-center">
           <button
             className="w-[50px] h-[36px] flex items-center justify-center"
-            onClick={handleClickBurger}
+            onClick={handleSearchBranchBurger}
           >
             {/** Hamburger Menu Icon Start */}
             <div className="w-[35px] h-[35px] rounded-full flex items-center justify-center hover:bg-[#e6f6fc]">
@@ -35,7 +35,7 @@ function Header() {
           {/** px-[816px] Menu Start */}
           <div className="hidden md2:flex ml-[8px] w-[250px] h-[26px] justify-between items-center">
             <p
-              className="text-[14px] font-prompt cursor-pointer text-[#4a91b1]"
+              className="text-[14px] font-prompt cursor-pointer hover:text-[#4a91b1]"
               onClick={() => {
                 navigate("/home");
               }}
@@ -51,7 +51,7 @@ function Header() {
               ติดตามการสั่งซื้อ
             </p>
             <p
-              className="text-[14px] font-prompt cursor-pointer hover:text-[#4a91b1]"
+              className="text-[14px] font-prompt cursor-pointer text-[#4a91b1]"
               onClick={() => {
                 navigate("/search-store");
               }}
@@ -151,4 +151,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default SearchBranchHeader;

@@ -50,7 +50,12 @@ function OrderTrackingHeader() {
             >
               ติดตามการสั่งซื้อ
             </p>
-            <p className="text-[14px] font-prompt cursor-pointer hover:text-[#4a91b1]">
+            <p
+              className="text-[14px] font-prompt cursor-pointer hover:text-[#4a91b1]"
+              onClick={() => {
+                navigate("/search-store");
+              }}
+            >
               ค้นหาสาขา
             </p>
           </div>
