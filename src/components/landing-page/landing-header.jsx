@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { useHomeModal } from "../../context/home-modal-context";
 import { useNavigate } from "react-router-dom";
+import { useCountPizza } from "../../context/add-pizza-context";
 
 function Header() {
   const navigate = useNavigate();
   const { setIsOpen } = useHomeModal();
+  const { isCount } = useCountPizza();
   const handleClickBurger = () => {
     setIsOpen(true);
   };
@@ -134,7 +136,7 @@ function Header() {
               {/** Cart Summary Start */}
               <div className="flex items-center">
                 <p className="font-prompt text-[12px] group-hover:text-white">
-                  0
+                  {isCount}
                 </p>
                 <p className="font-prompt text-[12px] group-hover:text-white pl-[3px]">
                   รายการ

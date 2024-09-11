@@ -8,20 +8,23 @@ import Footer from "../components/footer";
 import { FilterProvider } from "../context/filter-context";
 import { HomeModalProvider } from "../context/home-modal-context";
 import HomeBurgerModal from "../components/landing-page/home-burger-modal";
+import { CountPizzaProvider } from "../context/add-pizza-context";
 
 function LandingPage() {
   return (
     <HomeModalProvider>
       <div className="w-full h-full overflow-clip">
-        <LandingHeader />
-        <HomeBurgerModal />
-        <CardCarousel />
-        <FilterProvider>
-          <FilterCategory />
-          <ContentCard />
-        </FilterProvider>
-        <LandingCart />
-        <Footer />
+        <CountPizzaProvider>
+          <LandingHeader />
+          <HomeBurgerModal />
+          <CardCarousel />
+          <FilterProvider>
+            <FilterCategory />
+            <ContentCard />
+          </FilterProvider>
+          <LandingCart />
+          <Footer />
+        </CountPizzaProvider>
       </div>
     </HomeModalProvider>
   );
