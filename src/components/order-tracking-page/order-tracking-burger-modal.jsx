@@ -177,7 +177,12 @@ function OrderTrackingBurgerModal() {
                 {/** Find Branch Button Section End */}
 
                 {/** About-Us Button Section Start */}
-                <button className="w-full h-[53px] border-t-[1px] flex gap-[8px] items-center">
+                <button
+                  className="w-full h-[53px] border-t-[1px] flex gap-[8px] items-center"
+                  onClick={() => {
+                    navigate("/about");
+                  }}
+                >
                   <div className="w-[26px] h-[26px] flex items-center justify-center">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -197,7 +202,12 @@ function OrderTrackingBurgerModal() {
                 {/** About-Us Button Section End */}
 
                 {/** Contact-Us Button Section Start */}
-                <button className="w-full h-[53px] border-y-[1px] flex gap-[8px] items-center">
+                <button
+                  className="w-full h-[53px] border-y-[1px] flex gap-[8px] items-center"
+                  onClick={() => {
+                    navigate("/contact");
+                  }}
+                >
                   <div className="w-[26px] h-[26px] flex items-center justify-center">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
