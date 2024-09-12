@@ -6,7 +6,8 @@ import { useCountPizza } from "../../context/add-pizza-context.jsx";
 
 function ContentCard() {
   const { isSection, isTypePizza } = useFilter();
-  const { isCount, setIsCount } = useCountPizza();
+  const { isCount, setIsCount, totalPrice, setTotalPrice } = useCountPizza();
+
   let datas = DataMenu;
 
   const filterMenu = datas.filter((items) => {
@@ -18,8 +19,9 @@ function ContentCard() {
     return filterByCategory;
   });
 
-  const handleClickAdd = () => {
+  const handleClickAdd = (price) => {
     setIsCount(isCount + 1);
+    setTotalPrice(totalPrice + price);
   };
 
   return (
@@ -68,7 +70,7 @@ function ContentCard() {
                   </p>
                   <div
                     className="w-[26px] h-[26px] bg-[#0b6a95] hover:brightness-125 rounded-full flex items-center justify-center"
-                    onClick={handleClickAdd}
+                    onClick={() => handleClickAdd(Number(items.price))}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

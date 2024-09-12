@@ -1,6 +1,8 @@
 import React from "react";
+import { useCountPizza } from "../../context/add-pizza-context";
 
 function LandingCart() {
+  const { isCount, totalPrice } = useCountPizza();
   return (
     <div className="w-screen px-[15px] py-[20px] rounded-t-[14px] sticky bottom-0 bg-white shadow-[0px_-4px_4px_0px_rgba(0,0,0,0.05)] min-[816px]:hidden">
       <div className="w-full h-[52px] bg-[#0b6a95] px-[10px] py-[14px] rounded-[8px] flex items-center justify-between">
@@ -20,7 +22,7 @@ function LandingCart() {
           </p>
           <div className="flex items-center">
             <p className="font-prompt font-light text-[#898989] text-[13px]">
-              0
+              {isCount}
             </p>
             <p className="font-prompt font-light text-[#898989] ml-[3px] text-[13px]">
               รายการ
@@ -30,7 +32,7 @@ function LandingCart() {
         <div className="flex">
           <p className="font-prompt font-semibold text-white text-[13px]">฿</p>
           <p className="font-prompt font-semibold text-white text-[13px]">
-            50.00
+            {totalPrice}.00
           </p>
         </div>
       </div>
