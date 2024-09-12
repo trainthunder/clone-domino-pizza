@@ -12,6 +12,7 @@ import RegisterPage from "./pages/register-page";
 import OrderTrackingPage from "./pages/order-tracking-page";
 import SearchBranchPage from "./pages/search-branch-page";
 import AboutUsPage from "./pages/about-us-page";
+import ContactPage from "./pages/contact-page";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/tracking" element={<OrderTrackingPage />} />
           <Route path="/search-store" element={<SearchBranchPage />} />
           <Route path="/about" element={<AboutUsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </BrowserRouter>
     </div>
